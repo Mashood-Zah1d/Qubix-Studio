@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>The Wedders Event Planners – Unofficial Website Concept by Qubix Studio</title>
+<meta name="description" content="Unofficial website concept prepared by Qubix Studio. Not the official site of The Wedders Event Planners.">
+<meta name="theme-color" content="#1E1D1B">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#FAF6EE;--ivory2:#F2EBDD;--gold:#C9A96E;--gold-d:#9C7B3F;--char:#1E1D1B;--char2:#2A2825;--ink:#2B2926;--mute:#6E675C;--line:rgba(30,29,27,.14);--serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;--sans:Jost,system-ui,-apple-system,"Segoe UI",sans-serif;--ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--ivory);color:var(--ink);font:300 16.5px/1.7 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.05;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}img,svg{display:block;max-width:100%}
+.wrap{max-width:1240px;margin:0 auto;padding:0 28px}
+section{padding:120px 0;position:relative}
+.eyebrow{font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-d);font-weight:500;display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.eyebrow:before{content:"";width:42px;height:1px;background:currentColor}
+h2{font-size:clamp(38px,5.4vw,70px)}h2 em,h1 em{font-style:italic;color:var(--gold-d)}
+.dark{background:var(--char);color:var(--ivory)}.dark h2 em,.dark .eyebrow{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:17px 34px;font:500 12.5px var(--sans);letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--gold);color:var(--ivory);background:transparent;cursor:pointer;position:relative;overflow:hidden;transition:color .45s var(--ease);isolation:isolate}
+.btn:before{content:"";position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform .5s var(--ease);z-index:-1}
+.btn:hover{color:var(--char)}.btn:hover:before{transform:none}
+.btn.solid{background:var(--gold);color:var(--char)}.btn.solid:before{background:var(--ivory)}
+.btn.ink{color:var(--char);border-color:var(--char)}.btn.ink:before{background:var(--char)}.btn.ink:hover{color:var(--ivory)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.rv{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease),transform 1s var(--ease);transition-delay:var(--d,0s)}.rv.in{opacity:1;transform:none}
+/* disclaimer + nav */
+.bar{background:var(--gold);color:var(--char);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;text-align:center;padding:8px 14px;font-weight:500;position:relative;z-index:80}
+nav{position:fixed;top:0;left:0;right:0;z-index:70;transition:background .5s,padding .5s,transform .5s var(--ease);padding:26px 0;color:var(--ivory)}
+nav.top-bar{top:0}nav.stuck{background:rgba(30,29,27,.94);backdrop-filter:blur(14px);padding:14px 0}nav.hide{transform:translateY(-100%)}
+.nav{display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:var(--serif);font-size:27px;letter-spacing:.08em;font-weight:500}.logo small{display:block;font:400 8.5px var(--sans);letter-spacing:.44em;text-transform:uppercase;color:var(--gold);margin-top:3px}
+.menu{display:flex;gap:38px;align-items:center;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:400}
+.menu a:not(.btn){position:relative;padding:6px 0}.menu a:not(.btn):after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .5s var(--ease)}
+.menu a:not(.btn):hover:after,.menu a.act:after{transform:scaleX(1);transform-origin:left}
+.menu .btn{padding:12px 22px;font-size:11px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:1px;background:var(--ivory);transition:.4s var(--ease)}.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:27px}
+.burger.on i:nth-child(1){top:21px;transform:rotate(45deg)}.burger.on i:nth-child(2){top:21px;transform:rotate(-45deg)}
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;color:var(--ivory);background:radial-gradient(1200px 700px at 78% 40%,#4a3d27 0%,transparent 60%),radial-gradient(800px 600px at 10% 100%,#2f2a22 0%,transparent 60%),var(--char);overflow:hidden;padding:130px 0 90px}
+#bokeh{position:absolute;inset:0;width:100%;height:100%}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;width:100%}
+.hero h1{font-size:clamp(50px,8vw,116px);line-height:.95}
+.hero h1 span{display:block;overflow:hidden}.hero h1 span b{display:block;font-weight:500;transform:translateY(110%);animation:up 1.4s var(--ease) forwards}
+.hero h1 span:nth-child(2) b{animation-delay:.15s}.hero h1 span:nth-child(3) b{animation-delay:.3s}
+.hero h1 em{color:var(--gold)}
+@keyframes up{to{transform:none}}@keyframes fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero p{max-width:470px;color:#d9d0bf;margin:32px 0 42px;font-size:18px;animation:fade 1.3s .7s var(--ease) both}
+.hero .eyebrow,.hero .ctas{animation:fade 1.3s .9s var(--ease) both}.hero .eyebrow{animation-delay:.1s}
+.ctas{display:flex;gap:18px;flex-wrap:wrap}
+.arch{position:relative;justify-self:center;width:min(100%,430px);animation:fade 2s .4s both}
+.arch svg{width:100%;height:auto;overflow:visible}
+.scroll{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);display:flex;flex-direction:column;align-items:center;gap:12px}
+.scroll:after{content:"";width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:drop 2.2s infinite}@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* marquee */
+.marq{background:var(--ivory2);border-block:1px solid var(--line);padding:26px 0;overflow:hidden;white-space:nowrap}
+.marq div{display:inline-block;animation:mq 46s linear infinite;font-family:var(--serif);font-style:italic;font-size:30px;color:var(--gold-d)}
+.marq span{margin:0 28px}.marq span:after{content:"✦";font-style:normal;font-size:12px;margin-left:56px;color:var(--gold)}
+@keyframes mq{to{transform:translateX(-50%)}}
+/* intro */
+.intro{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;align-items:center}
+.intro p{color:var(--mute);margin:0 0 20px}.intro p.big{font-family:var(--serif);font-size:27px;line-height:1.4;color:var(--ink)}
+.frame{aspect-ratio:4/5;position:relative;background:var(--char);overflow:hidden}.frame:before{content:"";position:absolute;inset:14px;border:1px solid rgba(201,169,110,.6);z-index:2;pointer-events:none}
+.frame svg{width:100%;height:100%;object-fit:cover}
+.cap{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute);margin-top:14px}
+.caps{display:flex;gap:40px;flex-wrap:wrap;margin-top:38px;padding-top:34px;border-top:1px solid var(--line)}
+.caps b{display:block;font:500 24px var(--serif);color:var(--ink)}.caps span{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d)}
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:70px}
+.panel{position:relative;min-height:560px;padding:44px 38px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--char2);isolation:isolate;cursor:default}
+.panel svg.bgart{position:absolute;inset:0;width:100%;height:100%;z-index:-1;transition:transform 1.6s var(--ease),opacity .8s;opacity:.55}
+.panel:hover svg.bgart{transform:scale(1.07);opacity:.85}
+.panel:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,rgba(20,19,17,.92));z-index:-1}
+.panel .n{font-family:var(--serif);font-size:15px;color:var(--gold);letter-spacing:.3em}
+.panel h3{font-size:44px;margin:10px 0 14px}.panel p{color:#cfc6b4;font-size:15px;margin:0 0 20px;max-width:340px}
+.panel ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px;max-height:0;opacity:0;overflow:hidden;transition:max-height .8s var(--ease),opacity .8s}
+.panel:hover ul,.panel:focus-within ul,.panel.open ul{max-height:200px;opacity:1}
+.panel li{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;border:1px solid rgba(201,169,110,.5);padding:7px 13px;color:var(--ivory)}
+.panel .more{background:none;border:0;color:var(--gold);font:500 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;padding:0;margin-top:18px;cursor:pointer;align-self:flex-start}
+.also{margin-top:46px;display:flex;gap:14px 40px;flex-wrap:wrap;justify-content:center;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d)}
+/* gallery */
+.gh{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap}
+.filters{display:flex;gap:10px;flex-wrap:wrap}.filters button{background:none;border:1px solid var(--line);padding:12px 24px;font:400 11.5px var(--sans);letter-spacing:.22em;text-transform:uppercase;cursor:pointer;color:var(--ink);transition:.4s var(--ease)}
+.filters button:hover{border-color:var(--gold)}.filters button.on{background:var(--char);color:var(--ivory);border-color:var(--char)}
+.note{font-size:12.5px;color:var(--mute);margin:20px 0 0;padding:12px 16px;border-left:2px solid var(--gold);background:var(--ivory2)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:260px;gap:14px;margin-top:40px}
+.tile{position:relative;overflow:hidden;cursor:zoom-in;background:var(--char);border:0;padding:0;animation:pop .7s var(--ease) both}.tile.tall{grid-row:span 2}.tile.wide{grid-column:span 2}
+.tile svg,.tile img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}.tile:hover svg,.tile:hover img{transform:scale(1.08)}
+.tile .lb{position:absolute;left:0;right:0;bottom:0;padding:50px 20px 16px;background:linear-gradient(transparent,rgba(20,19,17,.85));color:var(--ivory);text-align:left;opacity:0;transform:translateY(14px);transition:.5s var(--ease)}
+.tile:hover .lb,.tile:focus-visible .lb{opacity:1;transform:none}.tile .lb b{font:500 22px var(--serif);display:block}.tile .lb small{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+.lightbox{position:fixed;inset:0;background:rgba(15,14,12,.96);z-index:100;display:none;align-items:center;justify-content:center;padding:30px;flex-direction:column;gap:18px;color:var(--ivory)}
+.lightbox.on{display:flex;animation:fade .5s both}.lightbox .im{width:min(88vw,820px);height:min(70vh,640px);border:1px solid var(--gold)}.lightbox .im svg{width:100%;height:100%}
+.lightbox .x{position:absolute;top:22px;right:26px;background:none;border:0;color:var(--ivory);font-size:34px;cursor:pointer}.lightbox .nv{position:absolute;top:50%;background:none;border:0;color:var(--gold);font-size:42px;cursor:pointer;padding:14px}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:90px;position:relative}
+.steps:before,.steps .prog{content:"";position:absolute;top:26px;left:10%;right:10%;height:1px;background:rgba(250,246,238,.2)}
+.steps .prog{background:var(--gold);right:auto;width:0;transition:width 1.6s var(--ease)}
+.step{text-align:center;padding:0 14px;cursor:pointer;background:none;border:0;color:inherit;font:inherit}
+.dot{width:54px;height:54px;border-radius:50%;border:1px solid var(--gold);margin:0 auto 26px;display:grid;place-items:center;background:var(--char);font:500 20px var(--serif);color:var(--gold);position:relative;z-index:1;transition:.5s var(--ease)}
+.step.on .dot{background:var(--gold);color:var(--char);transform:scale(1.18)}
+.step h3{font-size:27px;margin-bottom:8px}.step p{font-size:14.5px;color:#bdb4a2;margin:0;max-height:0;opacity:0;overflow:hidden;transition:.7s var(--ease)}
+.step.on p{max-height:240px;opacity:1}
+.pn{font-size:12.5px;color:#9a917f;text-align:center;margin-top:60px}
+/* quote */
+.qwrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;align-items:start}
+.qwrap>div:first-child p{color:var(--mute)}
+.qform{background:#fff;padding:46px;box-shadow:0 40px 80px -40px rgba(30,29,27,.35);border:1px solid var(--line)}
+.fld{margin-bottom:32px}.fld>label,.fld>.l{display:flex;justify-content:space-between;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-d);margin-bottom:14px;font-weight:500}
+.fld>label output,.l output{font-family:var(--serif);font-size:24px;letter-spacing:0;text-transform:none;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px}.chips button{border:1px solid var(--line);background:none;padding:12px 20px;font:400 13px var(--sans);letter-spacing:.06em;cursor:pointer;transition:.35s var(--ease);color:var(--ink)}
+.chips button:hover{border-color:var(--gold)}.chips button.on{background:var(--char);color:var(--ivory);border-color:var(--char)}
+input[type=date],input[type=text]{width:100%;padding:14px 4px;border:0;border-bottom:1px solid var(--ink);background:none;font:400 18px var(--sans);color:var(--ink);border-radius:0}
+input[type=range]{width:100%;accent-color:var(--gold-d);height:30px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px}.err{color:#a63d2f;font-size:13px;min-height:20px;margin:-14px 0 16px}
+.res{display:none;text-align:center;padding:10px 0}.res.on{display:block;animation:fade .8s both}.res h3{font-size:42px;margin:14px 0}
+.sum{text-align:left;border-top:1px solid var(--line);margin:26px 0}.sum div{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid var(--line);font-size:15px}.sum span{color:var(--gold-d);font-size:11px;letter-spacing:.22em;text-transform:uppercase;padding-top:3px}
+.demo{font-size:12.5px;color:var(--mute)}
+/* contact */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:60px}
+.ci{display:grid;gap:0}.ci a,.ci div{padding:24px 0;border-bottom:1px solid rgba(250,246,238,.16);display:flex;gap:22px;align-items:baseline}.ci small{width:90px;flex:none;font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold)}.ci span{font:400 24px var(--serif);word-break:break-word}.ci a:hover span{color:var(--gold)}
+.chat{background:#EFE7D6;color:var(--char);display:flex;flex-direction:column;min-height:440px}
+.ch{background:#1f3d2f;color:#fff;padding:18px 24px;display:flex;gap:14px;align-items:center}.ch i{width:42px;height:42px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font:600 18px var(--serif);color:var(--char);font-style:normal}.ch small{display:block;opacity:.7;font-size:12px}
+.msgs{flex:1;padding:24px;display:flex;flex-direction:column;gap:12px}
+.b{max-width:84%;padding:12px 16px;font-size:15px;line-height:1.5;box-shadow:0 1px 1px rgba(0,0,0,.12);animation:fade .6s both}.b.in{background:#fff;align-self:flex-start}.b.out{background:#d9f0c8;align-self:flex-end}
+.qr{display:flex;flex-wrap:wrap;gap:8px;padding:0 24px 18px}.qr button{border:1px solid #1f3d2f;background:none;color:#1f3d2f;padding:9px 15px;border-radius:99px;font:400 13px var(--sans);cursor:pointer}.qr button:hover{background:#1f3d2f;color:#fff}
+.wa{display:flex;align-items:center;justify-content:center;gap:12px;background:#25D366;color:#06301A;padding:18px;font:500 12.5px var(--sans);letter-spacing:.2em;text-transform:uppercase}
+footer{background:#141311;color:#a99f8c;padding:80px 0 34px;font-size:14px}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px;padding-bottom:50px;border-bottom:1px solid rgba(250,246,238,.12)}
+footer h4{font:500 11px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin:0 0 20px}footer li{list-style:none;margin:10px 0}footer ul{padding:0;margin:0}footer a:hover{color:var(--gold)}
+.disc{margin-top:30px;padding:18px 22px;border:1px solid rgba(201,169,110,.4);color:#d8cdb6;font-size:13px}.legal{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:26px;font-size:12px}
+.fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .4s var(--ease)}.fab:hover{transform:scale(1.1)}
+@media(max-width:1020px){section{padding:90px 0}.hero .wrap,.intro,.qwrap,.cg{grid-template-columns:1fr;gap:50px}.arch{width:min(70%,320px);order:-1}.hero{padding-top:150px}.svc{grid-template-columns:1fr}.panel{min-height:440px}.panel ul{max-height:200px;opacity:1}.grid{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr 1fr}
+.steps{grid-template-columns:1fr;gap:34px;margin-top:60px}.steps:before,.steps .prog{display:none}.step{display:grid;grid-template-columns:70px 1fr;text-align:left;gap:0 14px}.dot{margin:0;grid-row:span 2}.step p{max-height:none;opacity:1}
+.menu{position:fixed;inset:0;background:var(--char);flex-direction:column;justify-content:center;gap:30px;font-size:15px;transform:translateX(100%);transition:transform .7s var(--ease)}.menu.on{transform:none}.burger{display:block;z-index:2}nav.on{background:transparent}}
+@media(max-width:620px){.wrap{padding:0 20px}.qform{padding:30px 22px}.two{grid-template-columns:1fr;gap:0}.grid{grid-template-columns:1fr;grid-auto-rows:240px}.tile.wide,.tile.tall{grid-column:auto;grid-row:auto}.fg{grid-template-columns:1fr}.ci a,.ci div{flex-direction:column;gap:4px}.hero p{font-size:16.5px}.btn{padding:16px 26px}.bar{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.hero h1 span b{transform:none}}
+</style>
+</head>
+<body>
+<div class="bar">Unofficial website concept prepared by Qubix Studio · Not the official website of The Wedders Event Planners</div>
+<nav id="nav"><div class="wrap nav">
+<a href="#top" class="logo">THE WEDDERS<small>Event Planners</small></a>
+<button class="burger" id="bg" aria-label="Toggle menu" aria-expanded="false"><i></i><i></i></button>
+<div class="menu" id="menu"><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#process">Process</a><a href="#contact">Contact</a><a href="#quote" class="btn">Request a Quote</a></div>
+</div></nav>
+
+<header class="hero" id="top">
+<canvas id="bokeh" aria-hidden="true"></canvas>
+<div class="wrap">
+<div><div class="eyebrow">Event planners · DHA, Karachi</div>
+<h1><span><b>Unique,</b></span><span><b><em>seamless</em> &amp;</b></span><span><b>memorable.</b></span></h1>
+<p>Weddings, corporate events and private celebrations, designed and delivered with a personalised touch across DHA, Clifton, Bahria Town and beyond.</p>
+<div class="ctas"><a href="#quote" class="btn solid">Plan Your Event</a><a href="#gallery" class="btn">View Concept Gallery</a></div></div>
+<div class="arch" aria-hidden="true" id="heroArt"></div>
+</div>
+<a href="#about" class="scroll" aria-label="Scroll down">Scroll</a>
+</header>
+
+<div class="marq" aria-hidden="true"><div id="mq"></div></div>
+
+<section id="about"><div class="wrap intro">
+<div class="rv"><div class="frame" id="introArt"></div><div class="cap">Illustrative artwork · not a client project</div></div>
+<div><div class="eyebrow rv">The company</div>
+<h2 class="rv" style="--d:.1s">Every event, <em>personally</em> composed.</h2>
+<p class="big rv" style="--d:.2s;margin-top:34px">The Wedders is an event management company in Karachi, planning weddings, corporate events and birthdays for clients who want each event to feel unique, seamless and memorable.</p>
+<p class="rv" style="--d:.3s">Beyond weddings, the team plans engagements, Nikkah ceremonies, Mehndi events, daytime gatherings, baby showers and bridal showers, offering event décor, venue selection and catering services, with a personalised approach for every client.</p>
+<div class="caps rv" style="--d:.4s"><div><b>DHA Phase 6</b><span>Karachi, Pakistan</span></div><div><b>DHA · Clifton · Bahria Town</b><span>& beyond</span></div></div>
+</div></div></section>
+
+<section id="services" class="dark"><div class="wrap">
+<div class="eyebrow rv">Services</div><h2 class="rv" style="--d:.1s">Three ways to <em>celebrate.</em></h2>
+<div class="svc" id="svc"></div>
+<div class="also rv"><span>Event décor</span><span>Venue selection</span><span>Catering</span></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<div class="gh"><div><div class="eyebrow rv">Gallery</div><h2 class="rv" style="--d:.1s">A glimpse of <em>the style.</em></h2></div>
+<div class="filters rv" id="filters" role="group" aria-label="Filter gallery"></div></div>
+<p class="note rv">Concept gallery: these are illustrative artworks created for this presentation. They are <b>not photographs of The Wedders’ completed events</b>. In the live site, licensed or client-approved photography replaces them.</p>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section id="process" class="dark"><div class="wrap">
+<div class="eyebrow rv">How it could work</div><h2 class="rv" style="--d:.1s">From first call to <em>final toast.</em></h2>
+<div class="steps rv" id="steps"><div class="prog" id="prog"></div></div>
+<p class="pn">Proposed client journey for this concept. The Wedders team would refine each step to match how they actually work.</p>
+</div></section>
+
+<section id="quote"><div class="wrap qwrap">
+<div><div class="eyebrow rv">Request a quotation</div><h2 class="rv" style="--d:.1s">Tell us about <em>your day.</em></h2>
+<p class="rv" style="margin-top:30px;--d:.2s">A guided form lowers the barrier to making contact: visitors share the essentials in under a minute, and the team receives a clearer first enquiry.</p>
+<p class="rv demo" style="--d:.3s">Demo only. Nothing you enter is stored or sent anywhere.</p></div>
+<div class="qform rv" id="qf">
+<form id="qfm" novalidate>
+<div class="fld"><div class="l">Type of event</div><div class="chips" id="types" role="group"></div></div>
+<div class="two"><div class="fld"><label for="dt">Event date</label><input type="date" id="dt"></div>
+<div class="fld"><label for="gs">Guests <output id="gsO">200</output></label><input type="range" id="gs" min="10" max="1500" step="10" value="200"></div></div>
+<div class="fld"><label for="bd">Estimated budget <output id="bdO"></output></label><input type="range" id="bd" min="200000" max="10000000" step="100000" value="1500000"></div>
+<div class="err" id="err" role="alert"></div>
+<button class="btn ink" type="submit">Preview My Request</button></form>
+<div class="res" id="res"><div class="eyebrow" style="justify-content:center">Preview only</div><h3>Thank you.</h3><p class="demo">This is how the confirmation could look. No request has been sent.</p>
+<div class="sum" id="sum"></div><button class="btn ink" id="redo" type="button">Start Over</button></div>
+</div></div></section>
+
+<section id="contact" class="dark"><div class="wrap">
+<div class="eyebrow rv">Contact</div><h2 class="rv" style="--d:.1s">Let’s begin <em>the conversation.</em></h2>
+<div class="cg">
+<div class="ci rv"><a href="tel:+923331222051"><small>Phone</small><span>+92 333 1222051</span></a><a href="mailto:thewedderspk@gmail.com"><small>Email</small><span>thewedderspk@gmail.com</span></a><div><small>Location</small><span>DHA Phase 6, Karachi, Pakistan</span></div><a href="https://www.instagram.com/thewedderseventplanners/" target="_blank" rel="noopener"><small>Instagram</small><span>@thewedderseventplanners</span></a><a href="https://www.facebook.com/thewedderseventplanners" target="_blank" rel="noopener"><small>Facebook</small><span>thewedderseventplanners</span></a></div>
+<div class="chat rv" style="--d:.15s"><div class="ch"><i>W</i><div><b>The Wedders</b><small>WhatsApp inquiry preview</small></div></div>
+<div class="msgs" id="msgs"><div class="b in">Hello! 👋 What would you like to ask us about?</div></div>
+<div class="qr" id="qr"></div>
+<a class="wa" id="waLink" href="#" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm5.300 14.100c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.600-.4.400c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.100.1.700-.1 1.300z"/></svg>Open WhatsApp</a></div>
+</div></div></section>
+
+<footer><div class="wrap">
+<div class="fg"><div><div class="logo" style="color:var(--ivory)">THE WEDDERS<small>Event Planners</small></div><p style="margin-top:24px;max-width:340px">Unique, seamless and memorable events in Karachi, Pakistan.</p></div>
+<div><h4>Explore</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#gallery">Gallery</a></li><li><a href="#process">Process</a></li><li><a href="#quote">Request a Quote</a></li></ul></div>
+<div><h4>Contact</h4><ul><li><a href="tel:+923331222051">+92 333 1222051</a></li><li><a href="mailto:thewedderspk@gmail.com">thewedderspk@gmail.com</a></li><li>DHA Phase 6, Karachi</li></ul></div></div>
+<div class="disc"><b style="color:var(--gold)">Unofficial concept.</b> This page is an unofficial website concept prepared by Qubix Studio for presentation purposes. It is not the official website of The Wedders Event Planners. All artwork is illustrative, and no testimonials, awards, prices or client projects are shown. Forms are demonstrations only and do not collect or transmit data.</div>
+<div class="legal"><span>Concept by Qubix Studio</span><span>Business details sourced from public listings</span></div></div></footer>
+
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 00-8.600 15.100L2 22l5-1.300A10 10 0 1012 2zm5.300 14.100c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.600-.4.400c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.100.1.700-.1 1.300z"/></svg></a>
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Gallery preview"><button class="x" id="lbx" aria-label="Close">×</button><button class="nv" id="lbp" style="left:6px" aria-label="Previous">‹</button><button class="nv" id="lbn" style="right:6px" aria-label="Next">›</button><div class="im" id="lbi"></div><div id="lbc" style="text-align:center"></div></div>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const WA='923331222051';const wa=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+/* ---------- illustrative art (SVG) ---------- */
+const G='#C9A96E';
+function art(kind,v=0){const bgs=[['#26231f','#1a1917'],['#3a2f22','#1e1d1b'],['#2b2d2a','#171716'],['#f3ead9','#e4d6b9']];const [a,b]=bgs[v%4];const light=v%4===3,s=light?'#9C7B3F':G;
+let m='';
+if(kind==='arch'){m=`<path d="M70 360V170a90 90 0 01180 0v190" fill="none" stroke="${s}" stroke-width="2"/><path d="M90 360V172a70 70 0 01140 0v188" fill="none" stroke="${s}" stroke-opacity=".5"/>`;for(let i=0;i<22;i++){const t=Math.PI*(i/21),x=160-90*Math.cos(t),y=170-90*Math.sin(t);m+=`<circle cx="${x}" cy="${y}" r="${7+i%3*3}" fill="${s}" fill-opacity="${.25+i%4*.12}"/>`}m+=`<path d="M0 360h320" stroke="${s}" stroke-opacity=".6"/>`}
+if(kind==='chandelier'){m=`<path d="M160 0v70M160 70l-70 50M160 70l70 50M160 70v70M100 140h120" stroke="${s}" fill="none"/>`;for(let i=0;i<9;i++)m+=`<path d="M${110+i*12.500} 140v${22+i%3*8}" stroke="${s}" stroke-opacity=".6"/><circle cx="${110+i*12.500}" cy="${166+i%3*8}" r="3.500" fill="${s}"/>`;m+=`<circle cx="160" cy="150" r="140" fill="url(#gl${kind}${v})"/>`}
+if(kind==='table'){m=`<ellipse cx="160" cy="250" rx="120" ry="38" fill="none" stroke="${s}"/><ellipse cx="160" cy="250" rx="70" ry="20" fill="none" stroke="${s}" stroke-opacity=".5"/>`;for(let i=0;i<8;i++){const t=i/8*6.283;m+=`<circle cx="${160+Math.cos(t)*95}" cy="${252+Math.sin(t)*28}" r="7" fill="none" stroke="${s}"/>`}m+=`<path d="M160 250V170M140 170h40" stroke="${s}"/><path d="M160 150c-7 8-6 16 0 20 6-4 7-12 0-20z" fill="${s}"/>`}
+if(kind==='floral'){for(let r=0;r<3;r++)for(let i=0;i<8+r*4;i++){const n=8+r*4,t=i/n*6.283,R=30+r*34;m+=`<ellipse cx="${160+Math.cos(t)*R}" cy="${180+Math.sin(t)*R}" rx="${20-r*3}" ry="${9}" transform="rotate(${t*57.300} ${160+Math.cos(t)*R} ${180+Math.sin(t)*R})" fill="${s}" fill-opacity="${.5-r*.12}" stroke="${s}" stroke-width=".6"/>`}m+=`<circle cx="160" cy="180" r="9" fill="${s}"/>`}
+if(kind==='stage'){m=`<rect x="40" y="120" width="240" height="190" fill="none" stroke="${s}"/><rect x="62" y="142" width="196" height="150" fill="none" stroke="${s}" stroke-opacity=".5"/><path d="M20 310h280M40 310v20M280 310v20" stroke="${s}"/>`;for(let i=0;i<7;i++)m+=`<path d="M${80+i*26} 142v150" stroke="${s}" stroke-opacity=".25"/>`;m+=`<path d="M110 292v-40h100v40" fill="none" stroke="${s}"/>`}
+if(kind==='lanterns'){for(let i=0;i<5;i++){const x=50+i*55,y=60+(i%2)*60;m+=`<path d="M${x} 0V${y}" stroke="${s}" stroke-opacity=".5"/><rect x="${x-15}" y="${y}" width="30" height="46" rx="12" fill="${s}" fill-opacity=".2" stroke="${s}"/><circle cx="${x}" cy="${y+23}" r="14" fill="url(#gl${kind}${v})"/>`}m+=`<path d="M0 340c80-30 240-30 320 0" fill="none" stroke="${s}" stroke-opacity=".5"/>`}
+return `<svg viewBox="0 0 320 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative ${kind} artwork"><defs><linearGradient id="bg${kind}${v}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient><radialGradient id="gl${kind}${v}"><stop offset="0" stop-color="${s}" stop-opacity=".55"/><stop offset="1" stop-color="${s}" stop-opacity="0"/></radialGradient></defs><rect width="320" height="360" fill="url(#bg${kind}${v})"/>${m}</svg>`}
+$('#heroArt').innerHTML=`<svg viewBox="0 0 400 520" fill="none"><defs><radialGradient id="hg" cx=".5" cy=".6"><stop offset="0" stop-color="${G}" stop-opacity=".35"/><stop offset="1" stop-color="${G}" stop-opacity="0"/></radialGradient></defs><ellipse cx="200" cy="330" rx="210" ry="230" fill="url(#hg)"/><path d="M60 500V200a140 140 0 01280 0v300" stroke="${G}" stroke-width="1.500"/><path d="M84 500V204a116 116 0 01232 0v296" stroke="${G}" stroke-opacity=".45"/>${Array.from({length:30},(_,i)=>{const t=Math.PI*(i/29),x=200-140*Math.cos(t),y=200-140*Math.sin(t);return `<circle cx="${x}" cy="${y}" r="${6+i%4*3}" fill="${G}" fill-opacity="${.2+i%5*.1}"><animate attributeName="fill-opacity" values="${.2+i%5*.1};${.55};${.2+i%5*.1}" dur="${3+i%4}s" repeatCount="indefinite"/></circle>`}).join('')}${[0,1,2,3,4].map(i=>`<path d="M${130+i*35} 120v${60+i%2*40}" stroke="${G}" stroke-opacity=".5"/><circle cx="${130+i*35}" cy="${185+i%2*40}" r="4" fill="${G}"/>`).join('')}<path d="M130 500v-60h140v60" stroke="${G}" stroke-opacity=".6"/><path d="M20 500h360" stroke="${G}" stroke-opacity=".6"/></svg>`;
+$('#introArt').innerHTML=art('chandelier',1);
+const EV=['Weddings','Engagements','Nikkah','Mehndi','Birthdays','Corporate Events','Daytime Gatherings','Baby Showers','Bridal Showers','Event Décor','Venue Selection','Catering'];
+$('#mq').innerHTML=[...EV,...EV].map(e=>`<span>${e}</span>`).join('');
+/* ---------- services ---------- */
+const SV=[['01','Weddings','Complete celebrations from engagement to the main event, shaped around your families and traditions.',['Engagement','Nikkah','Mehndi','Wedding décor','Bridal shower'],'arch',0],
+['02','Corporate','Professional event management for business occasions, handled with care and attention to detail.',['Corporate events','Event design','Venue selection','Catering'],'stage',2],
+['03','Private Events','Intimate, personal gatherings given the same level of design and organisation.',['Birthdays','Baby shower','Daytime gatherings','Bridal shower'],'lanterns',1]];
+$('#svc').innerHTML=SV.map((s,i)=>`<article class="panel rv" style="--d:${i*.12}s" tabindex="0">${art(s[4],s[5]).replace('<svg','<svg class="bgart"')}<div class="n">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><ul>${s[3].map(x=>`<li>${x}</li>`).join('')}</ul></article>`).join('');
+/* ---------- gallery ---------- */
+const GL=[['Wedding','Floral Arch','arch',0,'tall'],['Corporate','Stage Design','stage',2,'wide'],['Private','Lantern Evening','lanterns',1,''],['Wedding','Mehndi Florals','floral',1,''],['Private','Table Setting','table',3,''],['Corporate','Chandelier Gala','chandelier',0,'tall'],['Wedding','Reception Table','table',0,'wide'],['Private','Garden Lights','lanterns',2,''],['Corporate','Conference Stage','stage',1,'']];
+const CATS=['All','Wedding','Corporate','Private'];let cur='All',shown=[],li=0;
+$('#filters').innerHTML=CATS.map(c=>`<button class="${c==='All'?'on':''}" data-c="${c}" aria-pressed="${c==='All'}">${c==='All'?'All':c==='Private'?'Private Events':c==='Wedding'?'Weddings':'Corporate'}</button>`).join('');
+const IMG={}; /* Optional: map a title to a licensed image URL, e.g. IMG['Floral Arch']='images/arch.jpg' */
+function drawGrid(){shown=GL.filter(g=>cur==='All'||g[0]===cur);$('#grid').innerHTML=shown.map((g,i)=>`<button class="tile ${g[4]}" data-i="${i}" style="animation-delay:${i*.06}s" aria-label="View ${g[1]}">${IMG[g[1]]?`<img src="${IMG[g[1]]}" alt="${g[1]}" loading="lazy">`:art(g[2],g[3])}<div class="lb"><small>${g[0]} · Illustrative</small><b>${g[1]}</b></div></button>`).join('')}
+$('#filters').onclick=e=>{const b=e.target.closest('button');if(!b)return;cur=b.dataset.c;$$('#filters button').forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});drawGrid()};
+function openLb(i){li=(i+shown.length)%shown.length;const g=shown[li];$('#lbi').innerHTML=art(g[2],g[3]);$('#lbc').innerHTML=`<div style="font:500 32px var(--serif)">${g[1]}</div><div style="font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)">${g[0]} · Illustrative artwork, not a client project</div>`;$('#lb').classList.add('on');document.body.style.overflow='hidden';$('#lbx').focus()}
+const closeLb=()=>{$('#lb').classList.remove('on');document.body.style.overflow=''};
+$('#grid').onclick=e=>{const t=e.target.closest('.tile');if(t)openLb(+t.dataset.i)};
+$('#lbx').onclick=closeLb;$('#lbp').onclick=()=>openLb(li-1);$('#lbn').onclick=()=>openLb(li+1);$('#lb').onclick=e=>{if(e.target.id==='lb')closeLb()};
+addEventListener('keydown',e=>{if(!$('#lb').classList.contains('on'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')openLb(li-1);if(e.key==='ArrowRight')openLb(li+1)});
+drawGrid();
+/* ---------- process ---------- */
+const PR=[['Consultation','We listen to your vision, guest list, preferences and date.'],['Concept & Design','A tailored theme, décor direction and layout for your event.'],['Venue & Vendors','Venue selection and coordination of décor and catering.'],['Planning','Timelines, details and confirmations managed in one place.'],['Event Day','The team is on site so you can enjoy the celebration.']];
+$('#steps').insertAdjacentHTML('beforeend',PR.map((p,i)=>`<button class="step ${i===0?'on':''}" data-i="${i}"><div class="dot">${i+1}</div><div><h3>${p[0]}</h3><p>${p[1]}</p></div></button>`).join(''));
+function setStep(i){$$('.step').forEach((s,j)=>s.classList.toggle('on',j===i));$('#prog').style.width=(i/(PR.length-1))*80+'%'}
+$('#steps').onclick=e=>{const s=e.target.closest('.step');if(s)setStep(+s.dataset.i)};
+let auto=0;new IntersectionObserver(([e])=>{if(e.isIntersecting&&!auto){auto=1;let i=0;setStep(0);const t=setInterval(()=>{i++;if(i>=PR.length){clearInterval(t);return}setStep(i)},1100)}},{threshold:.5}).observe($('#steps'));
+/* ---------- quote ---------- */
+const TY=['Wedding','Engagement','Nikkah','Mehndi','Birthday','Corporate','Baby Shower','Bridal Shower','Other'];let ty='';
+$('#types').innerHTML=TY.map(t=>`<button type="button" data-t="${t}" aria-pressed="false">${t}</button>`).join('');
+$('#types').onclick=e=>{const b=e.target.closest('button');if(!b)return;ty=b.dataset.t;$$('#types button').forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});$('#err').textContent=''};
+const pk=n=>n>=1e6?'PKR '+(n/1e6).toFixed(n%1e6?1:0)+' million':'PKR '+n.toLocaleString('en-US');
+const upd=()=>{$('#gsO').textContent=(+$('#gs').value).toLocaleString('en-US')+(+$('#gs').value===1500?'+':'');$('#bdO').textContent=pk(+$('#bd').value)+(+$('#bd').value===1e7?'+':'')};
+$('#gs').oninput=$('#bd').oninput=upd;upd();
+const d0=new Date();d0.setMinutes(d0.getMinutes()-d0.getTimezoneOffset());$('#dt').min=d0.toISOString().slice(0,10);
+$('#qfm').onsubmit=e=>{e.preventDefault();const d=$('#dt').value;if(!ty){$('#err').textContent='Please choose a type of event.';return}if(!d){$('#err').textContent='Please select an event date.';return}
+const ds=new Date(d+'T00:00').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+$('#sum').innerHTML=[['Event',ty],['Date',ds],['Guests',$('#gsO').textContent],['Budget',$('#bdO').textContent]].map(r=>`<div><span>${r[0]}</span><b style="font-weight:500">${r[1]}</b></div>`).join('');
+$('#qfm').style.display='none';$('#res').classList.add('on')};
+$('#redo').onclick=()=>{$('#res').classList.remove('on');$('#qfm').style.display='';$('#qfm').reset();ty='';$$('#types button').forEach(x=>x.classList.remove('on'));upd()};
+/* ---------- whatsapp preview ---------- */
+const QS=['Wedding planning','Corporate event','Birthday or private event','Décor & catering'];let wmsg='Hello The Wedders, I would like to inquire about your event planning services.';
+$('#qr').innerHTML=QS.map(q=>`<button>${q}</button>`).join('');
+const setWa=()=>{$('#waLink').href=wa(wmsg);$('#fab').href=wa('Hello The Wedders, I would like to inquire about your event planning services.')};setWa();
+$('#qr').onclick=e=>{const b=e.target.closest('button');if(!b)return;wmsg=`Hello The Wedders, I would like to inquire about: ${b.textContent}.`;const m=$('#msgs');m.insertAdjacentHTML('beforeend',`<div class="b out">${wmsg}</div>`);setTimeout(()=>{m.insertAdjacentHTML('beforeend','<div class="b in">Tap “Open WhatsApp” to continue this chat with the team.</div>')},700);setWa()};
+/* ---------- nav, reveal, menu ---------- */
+const nav=$('#nav'),menu=$('#menu'),bg=$('#bg');let ly=0;
+addEventListener('scroll',()=>{const y=scrollY;nav.classList.toggle('stuck',y>60);nav.classList.toggle('hide',y>ly&&y>500&&!menu.classList.contains('on'));ly=y},{passive:true});
+bg.onclick=()=>{const o=menu.classList.toggle('on');bg.classList.toggle('on',o);bg.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''};
+menu.onclick=e=>{if(e.target.tagName==='A'&&menu.classList.contains('on'))bg.click()};
+const secs=$$('section[id]'),links=$$('.menu a:not(.btn)');
+secs.forEach(s=>new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'}).observe(s));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});$$('.rv').forEach(el=>io.observe(el));
+$$('.panel').forEach(p=>p.addEventListener('click',()=>p.classList.toggle('open')));
+/* ---------- hero bokeh ---------- */
+(()=>{const c=$('#bokeh'),x=c.getContext('2d');let w,h,P=[];const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const rs=()=>{w=c.width=c.offsetWidth;h=c.height=c.offsetHeight;P=Array.from({length:Math.min(46,w/28|0)},()=>({x:Math.random()*w,y:Math.random()*h,r:4+Math.random()*26,s:.1+Math.random()*.35,a:.04+Math.random()*.16,p:Math.random()*6}))};rs();addEventListener('resize',rs);
+let mx=0;addEventListener('pointermove',e=>mx=(e.clientX/innerWidth-.5)*20);
+(function f(t){x.clearRect(0,0,w,h);P.forEach(q=>{q.y-=q.s;if(q.y<-40){q.y=h+40;q.x=Math.random()*w}const px=q.x+mx*q.r/20+Math.sin(t/2000+q.p)*10,g=x.createRadialGradient(px,q.y,0,px,q.y,q.r);g.addColorStop(0,`rgba(201,169,110,${q.a*(.7+.3*Math.sin(t/900+q.p))})`);g.addColorStop(1,'rgba(201,169,110,0)');x.fillStyle=g;x.beginPath();x.arc(px,q.y,q.r,0,6.283);x.fill()});if(!rm)requestAnimationFrame(f)})(0)})();
+</script>
+</body>
+</html>
