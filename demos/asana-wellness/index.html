@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Asana Wellness — Independent Website Concept by Qubix Studio</title>
+<meta name="description" content="Independent website concept by Qubix Studio. Not the official Asana Wellness website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400&family=DM+Sans:wght@400;500&family=Manrope:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ivory:#F6F2EA;--sage:#87947B;--char:#262B27;--terra:#B77F6C;--sand:#DDD2C2;--white:#FFFEFA;--ease:cubic-bezier(.22,1,.36,1);--pad:clamp(20px,5vw,72px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--ivory);color:var(--char);font:400 clamp(15px,1.1vw,17px)/1.7 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;width:100%;height:100%;object-fit:cover}
+a{color:inherit}
+h1,h2,h3{font-family:Manrope,sans-serif;font-weight:400;letter-spacing:-.025em;line-height:1.08}
+h1{font-size:clamp(42px,8.2vw,106px)}
+h2{font-size:clamp(32px,5vw,68px)}
+h3{font-size:clamp(22px,2.4vw,32px)}
+em,.it{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:400;letter-spacing:0}
+.wrap{padding:clamp(72px,11vw,160px) var(--pad);max-width:1600px;margin:auto}
+.ph{background:var(--sand);overflow:hidden;position:relative}
+.ph img{transition:transform 1.4s var(--ease)}
+.ph:hover img{transform:scale(1.045)}
+.mask{clip-path:inset(0 0 100% 0);transition:clip-path 1.3s var(--ease)}
+.mask.in{clip-path:inset(0)}
+.rv{opacity:0;transform:translateY(24px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 28px;border:1px solid currentColor;border-radius:99px;font:500 14px "DM Sans",sans-serif;text-decoration:none;background:none;color:inherit;cursor:pointer;transition:background .5s var(--ease),color .5s var(--ease),border-color .5s var(--ease)}
+.btn:hover{background:var(--char);color:var(--ivory);border-color:var(--char)}
+.btn.fill{background:var(--ivory);color:var(--char);border-color:var(--ivory)}
+.btn.fill:hover{background:var(--sage);border-color:var(--sage);color:var(--white)}
+:focus-visible{outline:2px solid var(--terra);outline-offset:3px}
+.small{font-size:13px;opacity:.7}
+.image-unavailable::after{content:"Photo unavailable — check your internet connection";position:absolute;inset:0;display:grid;place-items:center;padding:24px;text-align:center;font:500 14px "DM Sans",sans-serif;color:var(--char);background:var(--sand)}
+.hero .image-unavailable::after,.quote .image-unavailable::after{color:var(--ivory);background:var(--char)}
+.image-unavailable{background:linear-gradient(135deg,#87947B,#DDD2C2 65%,#B77F6C)}
+.image-unavailable:after{content:"Wellness · A moment to breathe";position:absolute;left:8%;bottom:9%;color:#fff;font:italic clamp(20px,3vw,36px) "Cormorant Garamond",serif;text-shadow:0 1px 10px #262B2780;pointer-events:none}
+/* nav */
+#bar{position:fixed;top:0;left:0;height:2px;width:0;background:var(--terra);z-index:60}
+header{position:fixed;inset:0 0 auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:14px var(--pad);color:var(--white);transition:background .5s var(--ease),color .5s}
+header.solid,header.open{background:rgba(246,242,234,.94);color:var(--char);backdrop-filter:blur(10px)}
+.logo{font:500 18px Manrope,sans-serif;letter-spacing:.02em;text-decoration:none}
+nav.d{display:none;gap:32px;font-size:14px}
+nav.d a{text-decoration:none;opacity:.85}nav.d a:hover{opacity:1}
+.burger{width:48px;height:48px;border:0;background:none;color:inherit;cursor:pointer;position:relative}
+.burger i{position:absolute;left:12px;right:12px;height:1.5px;background:currentColor;transition:transform .5s var(--ease)}
+.burger i:first-child{top:19px}.burger i:last-child{top:28px}
+.open .burger i:first-child{transform:translateY(4.5px) rotate(45deg)}
+.open .burger i:last-child{transform:translateY(-4.5px) rotate(-45deg)}
+#menu{position:fixed;inset:0;background:var(--char);color:var(--ivory);z-index:40;display:flex;flex-direction:column;justify-content:center;padding:var(--pad);gap:6px;clip-path:circle(0 at calc(100% - 40px) 32px);transition:clip-path .9s var(--ease);visibility:hidden}
+#menu.on{clip-path:circle(150% at calc(100% - 40px) 32px);visibility:visible}
+#menu a{font:400 clamp(30px,9vw,48px)/1.35 Manrope,sans-serif;text-decoration:none;letter-spacing:-.02em;min-height:48px}
+@media(min-width:900px){nav.d{display:flex}.burger{display:none}}
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:var(--white);background:var(--char)}
+.hero .bg{position:absolute;inset:0;overflow:hidden}
+.hero .bg img{animation:zoom 22s var(--ease) both;filter:brightness(.72) saturate(.85)}
+.hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(38,43,39,.35),rgba(38,43,39,.05) 40%,rgba(38,43,39,.65))}
+@keyframes zoom{from{transform:scale(1.12)}to{transform:scale(1)}}
+.hero .in{position:relative;padding:130px var(--pad) clamp(72px,10vh,110px);max-width:1600px;width:100%;margin:auto}
+.hero h1 span{display:block;overflow:hidden}
+.hero h1 span b{display:block;font-weight:400;transform:translateY(105%);animation:up 1.4s var(--ease) forwards}
+.hero h1 span:nth-child(2) b{animation-delay:.2s;font-family:"Cormorant Garamond",serif;font-style:italic;letter-spacing:0;color:var(--sand)}
+@keyframes up{to{transform:none}}
+.hero p{max-width:440px;margin:24px 0 32px;opacity:0;animation:fade 1.2s .7s var(--ease) forwards}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;opacity:0;animation:fade 1.2s .9s var(--ease) forwards}
+.hero .btn{color:var(--white)}.hero .btn.fill{color:var(--char)}
+@keyframes fade{to{opacity:1}}
+.scroll{position:absolute;right:var(--pad);bottom:40px;width:1px;height:64px;background:rgba(255,255,255,.3);overflow:hidden;display:none}
+.scroll:after{content:"";position:absolute;left:0;top:0;width:1px;height:24px;background:#fff;animation:drip 2.2s var(--ease) infinite}
+@keyframes drip{from{transform:translateY(-24px)}to{transform:translateY(64px)}}
+@media(min-width:700px){.scroll{display:block}}
+.disc{background:var(--sage);color:var(--white);text-align:center;padding:10px var(--pad);font-size:13px}
+/* philosophy */
+.phil{display:grid;gap:48px;align-items:center}
+.phil .imgs{position:relative;padding-bottom:22%}
+.phil .big{aspect-ratio:4/5;border-radius:200px 200px 0 0}
+.phil .sm{position:absolute;width:44%;aspect-ratio:1;right:0;bottom:0;border:8px solid var(--ivory)}
+.phil p{max-width:46ch;margin-top:24px}
+@media(min-width:900px){.phil{grid-template-columns:1.1fr 1fr;gap:9vw}.phil .imgs{order:-1}}
+/* experiences */
+.exp{background:var(--char);color:var(--ivory)}
+.exp .grid{display:grid;gap:32px;margin-top:48px}
+.tabs{display:flex;flex-direction:row;overflow-x:auto;gap:4px;border-bottom:1px solid rgba(246,242,234,.2);scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;min-height:48px;padding:0 18px;background:none;border:0;color:inherit;opacity:.5;font:400 clamp(18px,2vw,26px) Manrope,sans-serif;cursor:pointer;border-bottom:2px solid transparent;transition:opacity .5s,border-color .5s}
+.tabs button[aria-selected=true]{opacity:1;border-color:var(--terra)}
+.stage{display:grid;gap:28px}
+.stage .ph{aspect-ratio:4/3;background:#3a403b}
+.stage .txt{animation:fade .9s var(--ease)}
+.stage p{max-width:44ch;margin:16px 0}
+@media(min-width:900px){.stage{grid-template-columns:1.3fr 1fr;align-items:end;gap:6vw}.stage .ph{aspect-ratio:5/4}}
+/* flow */
+.flow{max-width:980px;margin:auto;text-align:center}
+.card{background:var(--white);margin-top:40px;padding:clamp(24px,5vw,64px);min-height:380px;display:flex;flex-direction:column;justify-content:center;border-radius:4px 80px 4px 4px;position:relative;overflow:hidden}
+.step{animation:fade .8s var(--ease)}
+.dots{display:flex;gap:8px;justify-content:center;margin-bottom:24px}
+.dots i{width:28px;height:2px;background:var(--sand);transition:background .5s}
+.dots i.a{background:var(--terra)}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.opts button{min-height:64px;background:var(--ivory);border:1px solid var(--sand);font:400 clamp(16px,2vw,20px) Manrope,sans-serif;color:var(--char);cursor:pointer;border-radius:40px 4px 40px 4px;transition:background .5s var(--ease),color .5s,transform .5s var(--ease)}
+.opts button:hover,.opts button:focus-visible{background:var(--sage);color:var(--white);transform:translateY(-2px)}
+.opts.three{grid-template-columns:1fr}
+@media(min-width:600px){.opts.three{grid-template-columns:repeat(3,1fr)}}
+.res{display:grid;gap:24px;text-align:left}
+.res .ph{aspect-ratio:4/3}
+@media(min-width:700px){.res{grid-template-columns:1fr 1fr;align-items:center}}
+.linkb{background:none;border:0;color:var(--terra);cursor:pointer;min-height:44px;font:500 14px "DM Sans";text-decoration:underline;margin-top:12px}
+/* studio */
+.studio{display:grid;gap:20px;margin-top:48px;grid-template-columns:repeat(6,1fr)}
+.studio figure{grid-column:span 6}
+.studio .ph{aspect-ratio:4/3}
+.studio figcaption{padding-top:10px;font-size:14px;opacity:.75}
+.px{will-change:transform}
+@media(min-width:800px){.studio figure:nth-child(1){grid-column:1/5}.studio figure:nth-child(2){grid-column:5/7;margin-top:18%}.studio figure:nth-child(2) .ph{aspect-ratio:3/4}.studio figure:nth-child(3){grid-column:2/6}.studio figure:nth-child(1) .ph{aspect-ratio:16/10}}
+/* schedule */
+.sch{background:var(--sand)}
+.days{display:flex;gap:6px;overflow-x:auto;margin:32px 0 20px;scrollbar-width:none}
+.days button{flex:1 0 64px;min-height:56px;background:transparent;border:1px solid rgba(38,43,39,.25);cursor:pointer;font:400 15px "DM Sans";color:var(--char);border-radius:40px;transition:background .5s,color .5s}
+.days button[aria-selected=true]{background:var(--char);color:var(--ivory)}
+.slots{background:var(--white);padding:8px clamp(16px,4vw,40px)}
+.slot{display:grid;grid-template-columns:90px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--sand);animation:fade .7s var(--ease) both}
+.slot:last-child{border:0}
+.slot b{font:500 17px Manrope}
+@media(min-width:700px){.slot{grid-template-columns:140px 1fr 160px;align-items:center}.slot span:last-child{text-align:right}}
+/* quote */
+.quote{position:relative;min-height:90svh;display:grid;place-items:center;text-align:center;color:var(--white);overflow:hidden;background:var(--char)}
+.quote .bg{position:absolute;inset:-12% 0}
+.quote img{filter:brightness(.6)}
+.quote h2{position:relative;padding:0 var(--pad);font-size:clamp(38px,7vw,100px)}
+/* form */
+.inq{display:grid;gap:40px}
+@media(min-width:900px){.inq{grid-template-columns:1fr 1.2fr;gap:8vw}}
+form{display:grid;gap:22px}
+label{display:grid;gap:6px;font-size:14px;font-weight:500}
+input,select,textarea{font:400 16px "DM Sans";padding:14px 0;min-height:48px;background:none;border:0;border-bottom:1px solid var(--char);color:var(--char);border-radius:0;width:100%}
+input:focus,select:focus,textarea:focus{outline:0;border-color:var(--terra);box-shadow:0 1px 0 var(--terra)}
+.err{color:#9a4a38;font-size:13px;min-height:1em;font-weight:400}
+.ok{background:var(--sage);color:var(--white);padding:clamp(28px,5vw,56px);animation:fade .9s var(--ease)}
+.note{border-left:2px solid var(--terra);padding-left:16px;margin-top:24px;font-size:14px}
+/* contact + footer */
+.ct{background:var(--white)}
+.ct dl{display:grid;gap:20px;margin:32px 0;max-width:520px}
+.ct dt{font-weight:500}
+.links{display:flex;flex-wrap:wrap;gap:12px}
+footer{background:var(--char);color:var(--ivory);padding:64px var(--pad) 32px}
+footer .g{display:grid;gap:32px;max-width:1600px;margin:auto}
+footer nav{display:flex;flex-wrap:wrap;gap:6px 24px}
+footer nav a,footer .g a{min-height:44px;display:inline-flex;align-items:center;opacity:.85}
+footer .cr{max-width:1600px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(246,242,234,.2)}
+@media(min-width:800px){footer .g{grid-template-columns:1.2fr 1.5fr 1fr}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv,.hero h1 span b,.hero p,.hero .ctas{opacity:1;transform:none}.mask{clip-path:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<header id="hd">
+  <a class="logo" href="#top">Asana Wellness</a>
+  <nav class="d" aria-label="Primary"><a href="#philosophy">Philosophy</a><a href="#experiences">Experiences</a><a href="#flow">Find your flow</a><a href="#studio">Studio</a><a href="#schedule">Schedule</a><a href="#inquiry">Inquiry</a><a href="#contact">Contact</a></nav>
+  <button class="burger" id="bg" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><i></i><i></i></button>
+</header>
+<div id="menu" aria-hidden="true">
+  <a href="#philosophy">Philosophy</a><a href="#experiences">Experiences</a><a href="#flow">Find your flow</a><a href="#studio">Studio</a><a href="#schedule">Schedule</a><a href="#inquiry">Inquiry</a><a href="#contact">Contact</a>
+</div>
+
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <div class="bg"><img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="1545205597-3d9d02c29597" data-w="1920" alt="Sunlit yoga studio with wooden floor and large windows (stock photo)" fetchpriority="high"></div>
+  <div class="in">
+    <h1><span><b>Movement for the body.</b></span><span><b>Stillness for the mind.</b></span></h1>
+    <p>A considered approach to movement, balance, and wellbeing.</p>
+    <div class="ctas"><a class="btn fill" href="#experiences">Explore Our Classes</a><a class="btn" href="#flow">Find Your Flow</a></div>
+  </div>
+  <div class="scroll" aria-hidden="true"></div>
+</section>
+<div class="disc">Independent Website Concept by Qubix Studio — Not the Official Asana Wellness Website. All photographs are illustrative stock images.</div>
+
+<section id="philosophy" class="wrap phil">
+  <div class="imgs">
+    <div class="ph big mask"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="1544367567-0f2fcb009e0b" data-w="1200" alt="Woman in a calm yoga pose on a mat (stock photo)" loading="lazy"></div>
+    <div class="ph sm mask"><img src="https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="1540206395-68808572332f" data-w="700" alt="Sunlight through green leaves (stock photo)" loading="lazy"></div>
+  </div>
+  <div class="rv">
+    <h2>Wellness is not a destination. <em>It is a way of being.</em></h2>
+    <p>Asana Wellness is a boutique studio in DHA Phase 6, Karachi, built around mindful movement. This concept imagines a digital home that feels the way a good studio does: unhurried, light-filled, and easy to enter.</p>
+    <p class="small">Brand story, founder and history are intentionally left out until supplied by the studio.</p>
+  </div>
+</section>
+
+<section id="experiences" class="exp">
+  <div class="wrap">
+    <div class="rv"><h2>Signature <em>experiences</em></h2><p class="small" style="margin-top:12px">Illustrative categories. Actual offerings to be confirmed with Asana Wellness.</p></div>
+    <div class="grid">
+      <div class="tabs" role="tablist" aria-label="Experiences" id="tabs"></div>
+      <div class="stage" id="stage" role="tabpanel" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow" class="wrap">
+  <div class="flow rv">
+    <h2>Find your <em>flow</em></h2>
+    <p style="margin-top:16px">Three quick questions. A suggestion, not a prescription.</p>
+    <div class="card" id="card" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="studio" class="wrap" style="padding-top:0">
+  <div class="rv"><h2>The <em>studio</em></h2><p style="max-width:48ch;margin-top:16px">Light, texture and room to breathe. Stock imagery below stands in for the studio's own photography.</p></div>
+  <div class="studio">
+    <figure class="rv"><div class="ph"><img class="px" data-s=".04" src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="1574680096145-d05b474e2155" data-w="1400" alt="Group practicing yoga in a bright room (stock photo)" loading="lazy"></div><figcaption>Space to move. Illustrative stock photo.</figcaption></figure>
+    <figure class="rv"><div class="ph"><img class="px" data-s=".07" src="https://images.unsplash.com/photo-1552196563-55cd4e45efb3?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="1552196563-55cd4e45efb3" data-w="900" alt="Close-up of a stretching movement (stock photo)" loading="lazy"></div><figcaption>Detail in every movement. Illustrative.</figcaption></figure>
+    <figure class="rv"><div class="ph"><img class="px" data-s=".04" src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="1600334089648-b0d9d3028eb2" data-w="1400" alt="Neutral interior with soft natural light (stock photo)" loading="lazy"></div><figcaption>Neutral tones, natural light. Illustrative.</figcaption></figure>
+  </div>
+</section>
+
+<section id="schedule" class="wrap sch" style="max-width:none">
+  <div style="max-width:1100px;margin:auto">
+    <div class="rv"><h2>Class schedule <em>concept</em></h2><p class="small" style="margin-top:12px">Illustrative layout only. These are not real class times.</p></div>
+    <div class="days" id="days" role="tablist" aria-label="Day of week"></div>
+    <div class="slots" id="slots" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="quote" aria-label="Mindful moment">
+  <div class="bg"><img class="px" data-s="-.08" src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="1599901860904-17e6ed7083a0" data-w="1920" alt="Quiet seated meditation in soft light (stock photo)" loading="lazy"></div>
+  <h2 class="rv">Make space <em>for yourself.</em></h2>
+</section>
+
+<section id="inquiry" class="wrap inq">
+  <div class="rv">
+    <h2>Begin with <em>an inquiry</em></h2>
+    <p style="margin-top:20px;max-width:40ch">Tell us what you are curious about and how we might help you settle in.</p>
+    <p class="note">This form is a non-functional booking demonstration. Nothing is sent or stored.</p>
+  </div>
+  <div id="fwrap">
+  <form id="f" novalidate>
+    <label>Full name<input name="n" autocomplete="name" required><span class="err" aria-live="polite"></span></label>
+    <label>Email<input name="e" type="email" autocomplete="email" required><span class="err" aria-live="polite"></span></label>
+    <label>Phone<input name="p" type="tel" autocomplete="tel" required><span class="err" aria-live="polite"></span></label>
+    <label>Preferred experience<select name="x" required><option value="">Choose one</option><option>Pilates</option><option>Yoga</option><option>Barre</option><option>Breathwork</option><option>Sound Healing</option></select><span class="err" aria-live="polite"></span></label>
+    <label>Message<textarea name="m" rows="3"></textarea></label>
+    <div><button class="btn" type="submit">Send inquiry</button></div>
+  </form>
+  </div>
+</section>
+
+<section id="contact" class="wrap ct">
+  <div class="rv">
+    <h2>Visit <em>the studio</em></h2>
+    <dl>
+      <div><dt>Location</dt><dd>Bukhari Commercial, DHA Phase 6, Karachi, Pakistan</dd></div>
+      <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/asanawellness.pk/" target="_blank" rel="noopener">@asanawellness.pk</a></dd></div>
+      <div><dt>Phone, email, hours</dt><dd class="small">Not verified, so not shown in this concept.</dd></div>
+    </dl>
+    <div class="links"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Asana+Wellness+Bukhari+Commercial+DHA+Phase+6+Karachi">Get directions</a><a class="btn" target="_blank" rel="noopener" href="https://www.instagram.com/asanawellness.pk/">Open Instagram</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="g">
+    <div><div class="logo" style="font-size:22px">Asana Wellness</div><p class="small" style="margin-top:8px">Boutique yoga, Pilates and wellness. Karachi.</p></div>
+    <nav aria-label="Footer"><a href="#philosophy">Philosophy</a><a href="#experiences">Experiences</a><a href="#flow">Find your flow</a><a href="#studio">Studio</a><a href="#schedule">Schedule</a><a href="#inquiry">Inquiry</a><a href="#contact">Contact</a></nav>
+    <div><a href="https://www.instagram.com/asanawellness.pk/" target="_blank" rel="noopener">Instagram</a></div>
+  </div>
+  <div class="cr small"><p>Independent Website Concept by Qubix Studio — Not the Official Asana Wellness Website.</p><p>Concept designed by Qubix Studio, Karachi. Photography via Unsplash, illustrative only.</p></div>
+</footer>
+
+<script>
+const U=(id,w)=>`https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=78`;
+// Each image has two independent backup photographs. Set error handlers BEFORE src.
+const BACKUPS=[
+ 'https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg?auto=compress&cs=tinysrgb&w=',
+ 'https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg?auto=compress&cs=tinysrgb&w=',
+ 'https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg?auto=compress&cs=tinysrgb&w='
+];
+function load(root){root.querySelectorAll('img[data-i]').forEach((img,index)=>{
+ const id=img.dataset.i,w=img.dataset.w||1200;
+ const urls=[U(id,w),...BACKUPS.map((u,j)=>BACKUPS[(j+index)%BACKUPS.length]+w)];
+ let attempt=0;
+ img.onerror=()=>{
+   attempt++;
+   if(attempt<urls.length){img.src=urls[attempt];return;}
+   img.style.opacity='.2';
+   const frame=img.closest('.ph,.bg');
+   if(frame){frame.classList.add('image-unavailable');frame.setAttribute('aria-label','Illustrative image unavailable');}
+ };
+ img.onload=()=>{img.style.opacity='1';img.closest('.ph,.bg')?.classList.remove('image-unavailable')};
+ img.src=urls[0];
+ img.removeAttribute('data-i');
+})}
+load(document);
+
+// nav
+const hd=document.getElementById("hd"),bg=document.getElementById("bg"),menu=document.getElementById("menu");
+function setMenu(o){menu.classList.toggle("on",o);hd.classList.toggle("open",o);bg.setAttribute("aria-expanded",o);menu.setAttribute("aria-hidden",!o);bg.setAttribute("aria-label",o?"Close menu":"Open menu");document.body.style.overflow=o?"hidden":""}
+bg.onclick=()=>setMenu(!menu.classList.contains("on"));
+menu.querySelectorAll("a").forEach(a=>a.onclick=()=>setMenu(false));
+addEventListener("keydown",e=>{if(e.key==="Escape")setMenu(false)});
+
+// scroll: progress, header, parallax
+const bar=document.getElementById("bar"),px=[...document.querySelectorAll(".px")];
+const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;let tick=0;
+function onScroll(){tick=0;const y=scrollY,h=document.documentElement.scrollHeight-innerHeight;
+ bar.style.width=(h>0?y/h*100:0)+"%";hd.classList.toggle("solid",y>innerHeight*.6);
+ if(!reduce)px.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<-100||r.top>innerHeight+100)return;
+  const d=(r.top+r.height/2-innerHeight/2)*parseFloat(el.dataset.s);el.style.transform=`translateY(${d}px) scale(1.18)`})}
+addEventListener("scroll",()=>{if(!tick)tick=requestAnimationFrame(onScroll)},{passive:true});onScroll();
+
+// reveals
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".rv,.mask").forEach(el=>io.observe(el));
+
+// experiences
+const EX=[
+ {n:"Pilates",i:"1518611012118-696072aa579a",d:"Controlled, precise movement that builds core strength, posture and body awareness."},
+ {n:"Yoga",i:"1575052814086-f385e2e2ad1b",d:"Breath-led postures for flexibility, steadiness and a quieter mind."},
+ {n:"Barre",i:"1571019613454-1cb2f99b2d8b",d:"Small, deliberate movements inspired by ballet to tone and lengthen."},
+ {n:"Breathwork",i:"1506126613408-eca07ce68773",d:"Guided breathing to settle the nervous system and create calm."},
+ {n:"Sound Healing",i:"1588286840104-8957b019727f",d:"A restful, listening-based practice of sound and stillness."}];
+const tabs=document.getElementById("tabs"),stage=document.getElementById("stage");
+function showEx(k){[...tabs.children].forEach((b,j)=>{b.setAttribute("aria-selected",j===k);b.tabIndex=j===k?0:-1});
+ const x=EX[k];stage.innerHTML=`<div class="ph"><img src="https://images.unsplash.com/photo-${x.i}?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="${x.i}" data-w="1200" alt="${x.n} atmosphere (stock photo)"></div><div class="txt"><h3>${x.n}</h3><p>${x.d}</p><p class="small">Illustrative description. Availability to be confirmed.</p><a class="btn" href="#inquiry" data-x="${x.n}">Enquire about ${x.n}</a></div>`;
+ load(stage);stage.querySelector("[data-x]").onclick=e=>{document.querySelector("[name=x]").value=x.n}}
+EX.forEach((x,k)=>{const b=document.createElement("button");b.role="tab";b.textContent=x.n;b.onclick=()=>showEx(k);
+ b.onkeydown=e=>{const t=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(t){const n=(k+t+EX.length)%EX.length;showEx(n);tabs.children[n].focus()}};tabs.append(b)});
+showEx(0);
+
+// find your flow
+const card=document.getElementById("card"),pick={};
+const Q=[{k:"g",t:"What are you seeking?",o:["Strength","Flexibility","Relaxation","Balance"]},{k:"l",t:"What is your experience level?",o:["Beginner","Intermediate","Experienced"]}];
+const REC={Strength:[1,"Pilates"],Flexibility:[1,"Yoga"],Relaxation:[3,"Breathwork"],Balance:[2,"Barre"]};
+const IDX={Pilates:0,Yoga:1,Barre:2,Breathwork:3};
+const LV={Beginner:"Start gently with a foundations session and take it at your own pace.",Intermediate:"You have a base to build on. Look for a steady, flowing session.",Experienced:"You can go deeper. Look for a longer, more challenging session."};
+function step(n){
+ if(n<2){const q=Q[n];card.innerHTML=`<div class="step"><div class="dots">${[0,1,2].map(i=>`<i class="${i<=n?"a":""}"></i>`).join("")}</div><h3>${q.t}</h3><div class="opts ${q.o.length===3?"three":""}">${q.o.map(o=>`<button>${o}</button>`).join("")}</div>${n?`<button class="linkb" data-b>Back</button>`:""}</div>`;
+  card.querySelectorAll(".opts button").forEach(b=>b.onclick=()=>{pick[q.k]=b.textContent;step(n+1)});
+  const bk=card.querySelector("[data-b]");if(bk)bk.onclick=()=>step(n-1);card.querySelector("button").focus({preventScroll:true})}
+ else{const name=REC[pick.g][1],x=EX[IDX[name]];
+  card.innerHTML=`<div class="step"><div class="dots"><i class="a"></i><i class="a"></i><i class="a"></i></div><div class="res"><div class="ph"><img src="https://images.unsplash.com/photo-${x.i}?auto=format&amp;fit=crop&amp;w=1400&amp;q=82" data-i="${x.i}" data-w="900" alt="${name} (stock photo)"></div><div><p class="small">For ${pick.g.toLowerCase()}, ${pick.l.toLowerCase()}</p><h3 style="margin:6px 0 12px">${name}</h3><p>${x.d} ${LV[pick.l]}</p><p class="small" style="margin:12px 0">Illustrative suggestion only. Not medical advice or confirmed availability.</p><a class="btn" href="#experiences" data-go>Explore This Experience</a><br><button class="linkb" data-r>Start again</button></div></div></div>`;
+  load(card);card.querySelector("[data-go]").onclick=()=>showEx(IDX[name]);card.querySelector("[data-r]").onclick=()=>step(0)}}
+step(0);
+
+// schedule (illustrative)
+const D=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],S={};
+D.forEach((d,i)=>S[d]=[["Morning","Yoga",""],["Midday","Pilates",""],["Evening",EX[(i+2)%5].n,""]].map((s,j)=>[s[0],j===2?EX[(i+2)%5].n:s[1],"Illustrative"]));
+const days=document.getElementById("days"),slots=document.getElementById("slots");
+function showDay(k){[...days.children].forEach((b,j)=>{b.setAttribute("aria-selected",j===k);b.tabIndex=j===k?0:-1});
+ slots.innerHTML=S[D[k]].map((s,j)=>`<div class="slot" style="animation-delay:${j*90}ms"><b>${s[0]}</b><span>${s[1]}</span><span class="small">Time to be confirmed</span></div>`).join("")}
+D.forEach((d,k)=>{const b=document.createElement("button");b.role="tab";b.textContent=d;b.onclick=()=>showDay(k);days.append(b)});
+showDay(new Date().getDay()===0?6:new Date().getDay()-1);
+
+// form
+const f=document.getElementById("f");
+f.onsubmit=e=>{e.preventDefault();let ok=true;
+ const chk=(n,fn,msg)=>{const el=f.elements[n],er=el.parentElement.querySelector(".err");const v=el.value.trim();const bad=!fn(v);er.textContent=bad?msg:"";el.setAttribute("aria-invalid",bad);if(bad&&ok){el.focus();ok=false}};
+ chk("n",v=>v.length>1,"Enter your full name.");
+ chk("e",v=>/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v),"Enter a valid email, like name@example.com.");
+ chk("p",v=>v.replace(/\D/g,"").length>=7,"Enter a phone number with at least 7 digits.");
+ chk("x",v=>v!=="","Choose an experience.");
+ if(!ok)return;
+ const nm=f.elements.n.value.trim().split(" ")[0].replace(/[<>&]/g,"");
+ document.getElementById("fwrap").innerHTML=`<div class="ok" role="status"><h3>Thank you, ${nm}.</h3><p style="margin-top:12px">This is a demonstration. Nothing was sent or stored. In a live version, the studio would reply to you personally.</p></div>`};
+</script>
+</body>
+</html>
