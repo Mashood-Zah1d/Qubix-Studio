@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F8F5EF">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="An independent website concept for Clay Arts & Pottery, Karachi. Explore pottery experiences and send an inquiry to the studio.">
+  <title>Clay Arts & Pottery | Make Something Yours — Qubix Studio Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.pexels.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f8f5ef;--white:#fffdf9;--ink:#27221f;--muted:#625b54;--clay:#bd5938;--clay-deep:#9c3e25;--soft:#e9d8c7;--sand:#f0e8dc;--olive:#68724d;--line:#e3dbd1;--r:20px;--max:1240px}
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:92px}
+    body{margin:0;background:var(--paper);color:var(--ink);font:400 15px/1.65 'Plus Jakarta Sans',system-ui,sans-serif;overflow-x:clip}
+    img{display:block;width:100%;height:100%;object-fit:cover}
+    a{color:inherit}button,select,input{font:inherit}button{cursor:pointer}
+    :focus-visible{outline:3px solid #f4a57e;outline-offset:4px}
+    .wrap{width:min(var(--max),calc(100% - 64px));margin-inline:auto}
+    .display,h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;letter-spacing:-.045em;line-height:1.1}
+    h1,h2,h3,p{margin:0}p{color:var(--muted)}
+    .eyebrow{font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase;color:var(--clay)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:52px;padding:14px 22px;border:1px solid transparent;border-radius:11px;text-decoration:none;font-weight:800;font-size:13px;line-height:1.25;transition:transform .25s,background .25s,border-color .25s,box-shadow .25s}
+    .btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--clay);color:white;box-shadow:0 10px 25px rgba(189,89,56,.15)}.btn-primary:hover{background:var(--clay-deep)}
+    .btn-ghost{background:var(--white);border-color:#d7c9ba;color:var(--ink)}.btn-ghost:hover{border-color:var(--clay)}
+    .btn-arrow{font-size:17px;line-height:1}
+    .site-header{position:sticky;top:0;z-index:60;background:rgba(248,245,239,.96);backdrop-filter:blur(18px);border-bottom:1px solid rgba(83,63,48,.11)}
+    .nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;text-decoration:none;min-width:0}
+    .brand-mark{width:43px;height:43px;display:grid;place-items:center;background:var(--clay);color:white;border-radius:13px 13px 18px 18px;transform:rotate(-8deg);font:800 24px 'Bricolage Grotesque',sans-serif;flex:none}
+    .brand-name{font:800 18px/.98 'Bricolage Grotesque',sans-serif;letter-spacing:-.04em}.brand-name small{display:block;font:700 10px/1.3 'Plus Jakarta Sans',sans-serif;letter-spacing:.13em;color:var(--clay);margin-top:3px}
+    .nav-links{display:flex;align-items:center;gap:34px}.nav-links a{font-size:13px;font-weight:700;text-decoration:none;transition:color .2s}.nav-links a:hover{color:var(--clay)}
+    .nav-cta{min-height:44px;padding:11px 18px;border-radius:10px}.menu-toggle{display:none;background:transparent;border:1px solid var(--line);border-radius:10px;padding:9px 12px;font-weight:800}
+    /* The hero always reserves an intentional, visible photo column. No full-screen overlays or giant clipped text. */
+    .hero{position:relative;padding:48px 0 56px;background:var(--paper)}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.98fr);gap:clamp(34px,5.6vw,86px);align-items:center;min-height:570px}
+    .hero-copy{min-width:0;padding:16px 0 18px}
+    .hero .eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:23px}
+    .hero .eyebrow::before{content:"";width:22px;height:2px;background:currentColor}
+    h1{font-size:clamp(46px,4.6vw,70px);font-weight:800;max-width:670px;line-height:1.035}
+    h1 .accent{color:var(--clay);display:block}
+    .hero-lede{font-size:clamp(15px,1.18vw,17px);max-width:475px;line-height:1.85;margin:24px 0 28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px}
+    .hero-foot{display:flex;align-items:center;gap:10px;margin-top:34px;color:#786d62;font-size:12px;font-weight:600}
+    .hero-foot .dot{width:8px;height:8px;background:var(--olive);border-radius:50%;flex:none}
+    .hero-visual{position:relative;height:clamp(450px,38vw,600px);min-width:0}
+    .hero-photo{position:absolute;inset:0 8% 0 0;border-radius:190px 22px 22px 22px;overflow:hidden;background:#b89a7c}
+    .hero-photo img{object-position:50% 48%;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}.hero-visual:hover .hero-photo img{transform:scale(1.035)}
+    .hero-photo::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);pointer-events:none}
+    .photo-tag{position:absolute;right:0;bottom:34px;z-index:2;width:176px;min-height:118px;background:var(--olive);color:white;border-radius:13px;display:flex;flex-direction:column;justify-content:center;padding:19px 21px;transform:rotate(5deg);box-shadow:0 18px 35px #2c201d2b}
+    .photo-tag span{font:800 23px/1.07 'Bricolage Grotesque',sans-serif;letter-spacing:-.04em}.photo-tag small{margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;opacity:.85}
+    @keyframes tagFloat{0%,100%{transform:translateY(0) rotate(5deg)}50%{transform:translateY(-7px) rotate(5deg)}}
+    @keyframes sparkTwinkle{0%,100%{transform:rotate(16deg) scale(1)}50%{transform:rotate(34deg) scale(1.12)}}
+    .photo-tag{animation:tagFloat 5.5s ease-in-out infinite}
+    .photo-spark{animation:sparkTwinkle 6s ease-in-out infinite;position:absolute;z-index:3;top:13px;right:3px;color:var(--clay);font-size:43px;line-height:1;transform:rotate(16deg)}
+    .mini-band{background:#e9dfd2;border-block:1px solid #dfd1c1}
+    .mini-band .wrap{display:flex;align-items:center;justify-content:center;gap:26px;padding:17px 0;color:#6e5e50;text-align:center;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+    .mini-band .sep{color:var(--clay);font-size:18px;line-height:1}
+    .section{padding:90px 0}
+    .section-top{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:34px}
+    .section-top h2{font-size:clamp(34px,3.9vw,56px);font-weight:800;margin-top:12px;max-width:680px}
+    .section-top>p{max-width:330px;font-size:14px;line-height:1.75}
+    .experiences{background:var(--white)}
+    .experience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
+    .experience{min-width:0}
+    .experience-image{position:relative;height:300px;border-radius:16px;overflow:hidden;background:#c2a18a}
+    .experience-image img{transition:transform .6s cubic-bezier(.2,.8,.2,1)}.experience:hover .experience-image img{transform:scale(1.055)}
+    .experience-no{position:absolute;left:15px;top:15px;z-index:2;background:var(--white);padding:7px 11px;border-radius:7px;font:800 11px 'Bricolage Grotesque',sans-serif;letter-spacing:.07em}
+    .experience-body{padding:20px 1px 0}.experience h3{font-size:clamp(23px,2.1vw,30px);font-weight:800;margin-bottom:9px}.experience p{font-size:13px;line-height:1.8;max-width:360px;min-height:69px}
+    .text-link{display:inline-flex;align-items:center;gap:9px;margin-top:17px;color:var(--clay-deep);font-size:13px;font-weight:800;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}.text-link:hover{color:var(--ink)}
+    .smallprint{font-size:11px;line-height:1.6;color:#84766c;margin-top:26px}
+    .journey{background:#eee6da}
+    .journey-grid{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(36px,6vw,100px);align-items:center}
+    .journey-photo{height:470px;border-radius:20px 20px 130px 20px;overflow:hidden;background:#b79a7f;position:relative}
+    .journey-photo img{object-position:center}
+    .journey-copy h2{font-size:clamp(34px,4vw,58px);font-weight:800;max-width:530px;margin:13px 0 17px}
+    .journey-copy>p{max-width:530px;font-size:14px;line-height:1.85}
+    .steps{margin-top:29px;display:grid;gap:19px}.step{display:grid;grid-template-columns:36px minmax(0,1fr);gap:16px;align-items:start}
+    .step-num{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:#e1c6b0;color:#8e402b;font:800 13px 'Bricolage Grotesque',sans-serif}
+    .step h3{font-size:17px;letter-spacing:-.025em;margin-bottom:3px}.step p{font-size:12px;line-height:1.65}
+    .journey-copy .btn{margin-top:28px}
+    .contact-section{background:var(--ink);color:var(--white);padding:82px 0 84px;position:relative;overflow:hidden}
+    .contact-section::before{content:"";position:absolute;right:-150px;top:-220px;width:520px;height:520px;border:90px solid rgba(255,255,255,.035);border-radius:50%;pointer-events:none}
+    .contact-grid{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.85fr);gap:clamp(40px,7vw,110px);align-items:center}
+    .contact-section .eyebrow{color:#f5b48c}.contact-section h2{font-size:clamp(38px,4.5vw,62px);max-width:570px;font-weight:800;margin:13px 0 17px}
+    .contact-section p{color:#d6c9be;font-size:14px;line-height:1.9;max-width:460px}
+    .contact-meta{display:grid;gap:14px;margin-top:27px}.contact-meta a{display:inline-flex;align-items:center;gap:10px;width:fit-content;text-decoration:none;color:#f2e4d8;font-size:13px;font-weight:700}.contact-meta a:hover{color:#ffb18a}
+    .inquiry{padding:31px;background:#fffaf4;color:var(--ink);border-radius:18px;box-shadow:0 22px 45px rgba(0,0,0,.12)}
+    .inquiry h3{font-size:24px;margin-bottom:6px}.inquiry>p{font-size:12px;color:#74675c;margin-bottom:24px}
+    .field{margin-bottom:17px}.field label{display:block;font-weight:800;font-size:12px;margin-bottom:8px}
+    .field select,.field input{width:100%;height:51px;padding:0 14px;border:1px solid #d8cfc3;border-radius:9px;background:white;color:var(--ink);font-size:13px;outline:none}
+    .field select:focus,.field input:focus{border-color:var(--clay);box-shadow:0 0 0 3px rgba(189,89,56,.12)}
+    .inquiry .btn{width:100%;margin-top:4px}.inquiry small{display:block;margin-top:12px;color:#84766c;font-size:10px;line-height:1.6}
+    .site-footer{background:#191512;color:#d2c4b9;padding:27px 0}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;font-size:11px;line-height:1.7}
+    .site-footer a{color:#f2e1d2}.footer-disclaimer{max-width:570px;color:#b8a99d}
+    .whatsapp-float{position:fixed;bottom:23px;right:23px;z-index:45;display:flex;align-items:center;gap:9px;background:#23774e;color:white;padding:12px 17px;border-radius:99px;box-shadow:0 12px 35px #0003;text-decoration:none;font-size:12px;font-weight:800;transition:transform .25s,background .25s}
+    .whatsapp-float:hover{background:#185e3c;transform:translateY(-3px)}
+    .wa-icon{width:19px;height:19px;display:block;fill:currentColor}
+    /* Image resilience: every photo has 2 external fallbacks, then a tasteful, visible illustration. */
+    .photo-frame{position:relative;isolation:isolate;background:linear-gradient(130deg,#c5a486,#886049)}
+    .photo-frame::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 67% 30%,#e9c6a1 0 12%,transparent 13%),linear-gradient(130deg,#b28a6c,#d5b59a)}
+    .photo-frame::after{content:"";position:absolute;z-index:-1;bottom:12%;left:32%;width:35%;height:55%;background:#7c5039;border-radius:28% 28% 42% 42% / 16% 16% 52% 52%;box-shadow:inset 0 18px 0 rgba(255,255,255,.12),0 16px 40px #513b2d4d}
+    .photo-frame img{position:relative;z-index:1}
+    .photo-frame.is-fallback img{display:none}
+    .photo-frame.is-fallback::before,.photo-frame.is-fallback::after{z-index:0}
+    .photo-frame.is-fallback .photo-label{display:block}
+    .photo-label{display:none;position:absolute;bottom:18px;left:18px;right:18px;z-index:1;color:white;font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-shadow:0 1px 5px #0009}
+    @media(max-width:1020px){.wrap{width:min(var(--max),calc(100% - 44px))}.hero-grid{gap:30px}.hero-visual{height:490px}.hero-photo{inset:0 4% 0 0}.photo-tag{width:145px;min-height:100px}.photo-tag span{font-size:19px}.experience-image{height:250px}.journey-grid{gap:40px}.journey-photo{height:440px}}
+    @media(max-width:760px){.nav{min-height:70px}.nav-links{gap:18px}.nav-links a{font-size:12px}.nav-cta{display:none}.hero{padding:36px 0 55px}.hero-grid{grid-template-columns:1fr;gap:32px;min-height:0}.hero-copy{padding:0}.hero h1{max-width:650px;font-size:clamp(43px,8.3vw,68px)}.hero-lede{margin:19px 0 23px}.hero-foot{margin-top:23px}.hero-visual{height:390px;max-width:620px;width:100%;margin:auto}.hero-photo{inset:0 6% 0 0;border-radius:140px 18px 18px 18px}.photo-tag{bottom:15px}.section{padding:70px 0}.section-top{display:block}.section-top>p{margin-top:14px;max-width:550px}.experience-grid{gap:15px}.experience-image{height:205px}.experience h3{font-size:23px}.experience p{min-height:0}.journey-grid{grid-template-columns:1fr}.journey-photo{height:360px;order:2}.journey-copy{order:1}.contact-grid{grid-template-columns:1fr;gap:32px}.contact-section{padding:65px 0}.contact-section h2{max-width:600px}}
+    @media(max-width:600px){.wrap{width:calc(100% - 36px)}.brand-name{font-size:16px}.brand-mark{width:39px;height:39px;font-size:22px}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:69px;left:0;right:0;background:var(--paper);padding:12px 18px 18px;border-bottom:1px solid var(--line);box-shadow:0 12px 22px #0000000a;flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:13px 5px;font-size:14px}.hero{padding:30px 0 44px}.hero h1{font-size:clamp(42px,11vw,60px)}.hero .eyebrow{font-size:10px;margin-bottom:15px}.hero-lede{font-size:14px;line-height:1.8}.hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}.hero-actions .btn{padding:13px 10px;font-size:11px;min-height:52px}.hero-visual{height:340px}.hero-photo{border-radius:115px 17px 17px 17px}.photo-tag{width:130px;min-height:88px;padding:14px 15px}.photo-tag span{font-size:17px}.photo-tag small{font-size:8px}.mini-band .wrap{gap:11px;font-size:9px;letter-spacing:.06em}.mini-band .sep{font-size:13px}.section{padding:62px 0}.section-top{margin-bottom:24px}.section-top h2{font-size:36px}.experience-grid{grid-template-columns:1fr;gap:32px}.experience-image{height:clamp(230px,66vw,335px)}.experience-body{padding-top:14px}.experience p{font-size:13px}.text-link{margin-top:12px}.journey-photo{height:300px;border-radius:18px 18px 90px 18px}.journey-copy h2{font-size:38px}.contact-section h2{font-size:42px}.inquiry{padding:23px}.whatsapp-float{bottom:13px;right:13px;padding:12px 14px}.whatsapp-float .wa-text{display:none}.site-footer{padding-bottom:78px}}
+    @media(max-width:360px){.hero-actions{grid-template-columns:1fr}.hero h1{font-size:40px}.hero-visual{height:290px}.mini-band .wrap{font-size:8px}.photo-tag{width:116px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Clay Arts and Pottery home"><span class="brand-mark" aria-hidden="true">C</span><span class="brand-name">CLAY ARTS<br>&amp; POTTERY<small>KARACHI · CREATIVE STUDIO</small></span></a>
+      <nav class="nav-links" id="nav-links" aria-label="Main navigation"><a href="#experiences">Experiences</a><a href="#how">How it works</a><a href="#contact">Contact</a></nav>
+      <a class="btn btn-primary nav-cta" href="#contact">Plan your visit <span aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false">Menu ☰</button>
+    </div>
+  </header>
+  <main id="top">
+    <section class="hero" aria-label="Welcome">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">A little clay. A lot of joy.</div>
+          <h1>Make a little mess.<span class="accent">Make it yours.</span></h1>
+          <p class="hero-lede">Curious about pottery? Discover creative experiences in Karachi and connect directly with the studio to ask about sessions, prices, and availability.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#experiences">Explore experiences <span class="btn-arrow" aria-hidden="true">↗</span></a><a class="btn btn-ghost" href="https://wa.me/923222278718?text=Hello%20Clay%20Arts%20%26%20Pottery!%20I%27d%20like%20to%20ask%20about%20your%20pottery%20experiences." target="_blank" rel="noopener noreferrer">Chat on WhatsApp <span class="btn-arrow" aria-hidden="true">↗</span></a></div>
+          <div class="hero-foot"><span class="dot" aria-hidden="true"></span><span>New Kumbharwara, Karachi · Inquiries welcome</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-photo photo-frame"><img src="https://images.pexels.com/photos/6611301/pexels-photo-6611301.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1300" data-fallback="https://images.pexels.com/photos/8063838/pexels-photo-8063838.jpeg?auto=compress&amp;w=1200|https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Hands shaping a clay vessel on a pottery wheel, illustrative stock photograph" fetchpriority="high"><span class="photo-label">Pottery photography unavailable · visual concept</span></div>
+          <span class="photo-spark" aria-hidden="true">✳</span>
+          <div class="photo-tag" aria-hidden="true"><span>Good things<br>take shape.</span><small>Hands-on creativity</small></div>
+        </div>
+      </div>
+    </section>
+    <div class="mini-band" aria-label="Creative pottery in Karachi"><div class="wrap"><span>CREATE</span><span class="sep" aria-hidden="true">✳</span><span>EXPLORE</span><span class="sep" aria-hidden="true">✳</span><span>CONNECT</span></div></div>
+    <section class="section experiences" id="experiences">
+      <div class="wrap">
+        <div class="section-top"><div><div class="eyebrow">Explore the possibilities</div><h2>Find your kind of creative.</h2></div><p>Start with what interests you. The studio can confirm which experiences are currently available.</p></div>
+        <div class="experience-grid">
+          <article class="experience"><div class="experience-image photo-frame"><img src="https://images.pexels.com/photos/8063876/pexels-photo-8063876.jpeg?auto=compress&amp;w=900" data-fallback="https://images.pexels.com/photos/6611301/pexels-photo-6611301.jpeg?auto=compress&amp;w=900|https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?auto=format&amp;fit=crop&amp;w=900&amp;q=80" loading="lazy" alt="A person shaping clay at a pottery wheel, illustrative stock photo"><span class="photo-label">Illustrative pottery concept</span><span class="experience-no">01 / WHEEL</span></div><div class="experience-body"><h3>Pottery wheel</h3><p>Ever wanted to shape clay on a spinning wheel? Ask the studio about available sessions.</p><a class="text-link" href="https://wa.me/923222278718?text=Hello!%20I%27d%20like%20to%20ask%20about%20pottery%20wheel%20sessions%2C%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Ask about this experience <span aria-hidden="true">↗</span></a></div></article>
+          <article class="experience"><div class="experience-image photo-frame"><img src="https://images.pexels.com/photos/9736895/pexels-photo-9736895.jpeg?auto=compress&amp;w=900" data-fallback="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&amp;fit=crop&amp;w=900&amp;q=80|https://images.pexels.com/photos/6611271/pexels-photo-6611271.jpeg?auto=compress&amp;w=900" loading="lazy" alt="Hands working with clay, illustrative stock photograph"><span class="photo-label">Illustrative pottery concept</span><span class="experience-no">02 / HANDS</span></div><div class="experience-body"><h3>Hand building</h3><p>Love making things by hand? Inquire about hand-building and beginner-friendly options.</p><a class="text-link" href="https://wa.me/923222278718?text=Hello!%20I%27d%20like%20to%20ask%20about%20hand-building%20pottery%20sessions%2C%20prices%20and%20availability." target="_blank" rel="noopener noreferrer">Ask about this experience <span aria-hidden="true">↗</span></a></div></article>
+          <article class="experience"><div class="experience-image photo-frame"><img src="https://images.pexels.com/photos/6611314/pexels-photo-6611314.jpeg?auto=compress&amp;w=900" data-fallback="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&amp;fit=crop&amp;w=900&amp;q=80|https://images.pexels.com/photos/8063870/pexels-photo-8063870.jpeg?auto=compress&amp;w=900" loading="lazy" alt="Pottery making in a creative studio, illustrative stock photograph"><span class="photo-label">Illustrative pottery concept</span><span class="experience-no">03 / TOGETHER</span></div><div class="experience-body"><h3>Creative group visits</h3><p>Planning something with friends or family? Ask whether group sessions can be arranged.</p><a class="text-link" href="https://wa.me/923222278718?text=Hello!%20I%27d%20like%20to%20ask%20whether%20group%20pottery%20visits%20are%20available%20and%20what%20they%20cost." target="_blank" rel="noopener noreferrer">Ask about group visits <span aria-hidden="true">↗</span></a></div></article>
+        </div>
+        <p class="smallprint">Concept note: Experience categories are suggestions, not confirmed studio offerings. All images are illustrative stock photography and do not depict the actual business.</p>
+      </div>
+    </section>
+    <section class="section journey" id="how">
+      <div class="wrap journey-grid">
+        <div class="journey-photo photo-frame"><img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" data-fallback="https://images.pexels.com/photos/9304551/pexels-photo-9304551.jpeg?auto=compress&amp;w=1100|https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&amp;fit=crop&amp;w=1100&amp;q=80" loading="lazy" alt="Handmade ceramic pieces, illustrative stock photograph"><span class="photo-label">Illustrative ceramics concept</span></div>
+        <div class="journey-copy"><div class="eyebrow">No complicated booking process</div><h2>From curious to creating. It's simple.</h2><p>Not sure where to start? That's okay. Tell the studio what interests you and let them guide you through the options.</p>
+          <div class="steps"><div class="step"><span class="step-num">01</span><div><h3>Choose what catches your eye</h3><p>Explore the pottery experience ideas above.</p></div></div><div class="step"><span class="step-num">02</span><div><h3>Send a quick WhatsApp</h3><p>Share your interest and a preferred date if you have one.</p></div></div><div class="step"><span class="step-num">03</span><div><h3>Confirm directly with the studio</h3><p>Ask about actual sessions, timings, pricing and availability.</p></div></div></div>
+          <a class="btn btn-primary" href="#contact">Plan your visit <span class="btn-arrow" aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section" id="contact">
+      <div class="wrap contact-grid">
+        <div><div class="eyebrow">Let's talk clay</div><h2>Your next creative moment starts here.</h2><p>Pick an interest, add a date if you like, and send one message. The studio will confirm what's possible.</p>
+          <div class="contact-meta"><a href="tel:+923222278718">☎ &nbsp; +92 322 2278718</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Clay+Arts+%26+Pottery+New+Kumbharwara+Karachi+Pakistan" target="_blank" rel="noopener noreferrer">⌖ &nbsp; New Kumbharwara, Karachi — directions ↗</a></div>
+        </div>
+        <form class="inquiry" id="inquiry"><h3>Plan your visit</h3><p>No sign-up. No payment. Just a quick inquiry.</p><div class="field"><label for="interest">What interests you?</label><select id="interest" required><option value="">Choose an experience</option><option>Pottery wheel</option><option>Hand building</option><option>Group / private visit</option><option>Not sure — please guide me</option></select></div><div class="field"><label for="visit-date">Preferred date <span style="font-weight:500;color:#86786e">(optional)</span></label><input type="date" id="visit-date"></div><button class="btn btn-primary" type="submit">Continue on WhatsApp <span class="btn-arrow" aria-hidden="true">↗</span></button><small>Opens WhatsApp with your selected details. This is not a booking; the studio must confirm availability and pricing.</small></form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>Clay Arts &amp; Pottery · Concept by <a href="https://mashood-zah1d.github.io/Qubix-Portfolio/" target="_blank" rel="noopener noreferrer">Qubix Studio</a></span><span class="footer-disclaimer">Independent design demonstration — not the official business website. Photos and suggested experiences are illustrative.</span></div></footer>
+  <a class="whatsapp-float" href="https://wa.me/923222278718?text=Hello%20Clay%20Arts%20%26%20Pottery!%20I%27d%20like%20to%20ask%20about%20your%20pottery%20experiences." target="_blank" rel="noopener noreferrer" aria-label="Contact Clay Arts and Pottery on WhatsApp"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.8 9.8 0 0 0-8.48 14.72L2 22l5.44-1.43A9.9 9.9 0 1 0 12 2Zm0 17.94a8 8 0 0 1-4.07-1.11l-.29-.17-3.22.85.86-3.14-.19-.3A8 8 0 1 1 12 19.94Zm4.39-5.99c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.65.58.25 1.03.4 1.38.51.58.18 1.11.15 1.53.09.47-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.22-.16-.46-.28Z"/></svg><span class="wa-text">Ask on WhatsApp</span></a>
+  <script>
+    (()=>{
+      const toggle=document.getElementById('menu-toggle');const links=document.getElementById('nav-links');
+      function closeMenu(){links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.textContent='Menu ☰'}
+      toggle.addEventListener('click',()=>{const opened=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(opened));toggle.textContent=opened?'Close ✕':'Menu ☰'});
+      links.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+      document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+      document.addEventListener('click',e=>{if(!links.contains(e.target)&&!toggle.contains(e.target))closeMenu()});
+      const date=document.getElementById('visit-date');const now=new Date();const localDay=new Date(now.getTime()-now.getTimezoneOffset()*60000).toISOString().slice(0,10);date.min=localDay;
+      document.getElementById('inquiry').addEventListener('submit',e=>{e.preventDefault();const interest=document.getElementById('interest');if(!interest.value){interest.focus();return}if(date.value&&date.value<date.min){date.focus();return}
+        const message=`Hello Clay Arts & Pottery! I'd like to inquire about a pottery experience.\n\nInterest: ${interest.value}\nPreferred date: ${date.value||'Flexible'}\n\nCould you please share current options, pricing and availability? I understand this is an inquiry, not a confirmed booking.`;
+        const url='https://wa.me/923222278718?text='+encodeURIComponent(message);const opened=window.open(url,'_blank','noopener,noreferrer');if(!opened)window.location.href=url;
+      });
+      document.querySelectorAll('.photo-frame img').forEach(img=>{
+        const sources=(img.getAttribute('data-fallback')||'').split('|').filter(Boolean);let index=0;
+        function fail(){if(index<sources.length){img.src=sources[index++]}else{img.closest('.photo-frame').classList.add('is-fallback')}}
+        img.addEventListener('error',fail);if(img.complete&&img.naturalWidth===0)fail();
+      });
+    })();
+  </script>
+</body>
+</html>
